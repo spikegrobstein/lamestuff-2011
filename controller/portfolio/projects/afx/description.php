@@ -1,0 +1,1 @@
+The logo I created for my open source project <a href="http://afx.sourceforge.net">AFX</a>.

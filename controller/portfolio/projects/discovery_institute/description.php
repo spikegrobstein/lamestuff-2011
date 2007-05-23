@@ -1,0 +1,1 @@
+Evolution of the design of Discovery Institute's Logo.
