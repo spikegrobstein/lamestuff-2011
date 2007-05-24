@@ -7,8 +7,12 @@
 </p>
 
 <div class="btn_container">
-	<a class="resume_btn" href="/resume" title="Work History and Skillset"><img src="/images/resume_big-btn.gif"></a>
-	<a class="portfolio_btn" href="/portfolio" title="Examples of Previous Work"><img src="/images/portfolio_big-btn.gif"></a>
+	<a class="resume_btn" href="/resume" title="Work History and Skillset"
+		<img src="/images/resume_big-btn.gif" alt="R&eacute;sum&eacute;" />
+	</a>
+	<a class="portfolio_btn" href="/portfolio" title="Examples of Previous Work">
+		<img src="/images/portfolio_big-btn.gif" alt="Portfolio" />
+	</a>
 </div>
 
 <p>
@@ -24,6 +28,6 @@
 	development. I'm highly proficient in PERL, C and AppleScript, on the programming end,
 	and consider myself to be a full-fledged guru in Adobe Illustrator and Photoshop.
 	<a href="/portfolio/" title="Examples of Previous Work">Examples</a> of my work are available as well as a complete
-	<a href="/resume/" title="Work History and Skillset">resume</a>. At the moment, I'm specializing in design of flyers and
-	automation of repetitive tasks in OSX using AppleScript.
+	<a href="/resume/" title="Work History and Skillset">r&eacute;sum&eacute;</a>. At the moment,
+	I'm specializing in design of flyers and automation of repetitive tasks in OSX using AppleScript.
 </p>

@@ -14,7 +14,7 @@
 	</tr>
 	<tr>
 		<td class="key">Website:</td>
-		<td class="val"><a href="http://www.lamestuff.com">lamestuff.com</td>
+		<td class="val"><a href="http://www.lamestuff.com">lamestuff.com</a></td>
 	</tr>
 	<tr>
 		<td class="key">AIM:</td>

@@ -26,16 +26,16 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Lamestuff::<?php readfile(get_controller_file($controller, 'title.html')); ?></title>
-	<link rel="stylesheet" href="/lamestuff.css" type="text/css" media="screen" title="default" charset="utf-8" />
-	<base href="http://<?PHP echo $_SERVER['HTTP_HOST']; ?>" />
+	<link rel="stylesheet" href="/lamestuff.css" type="text/css" media="screen" title="default" charset="utf-8">
+	<base href="http://<?PHP echo $_SERVER['HTTP_HOST']; ?>">
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="spike">
 	<!-- Visitors: <?php echo $counter; ?> -->
 </head>
 <body>
-	<a name="top"></a>
 	<div id="header">
-		<img src="<?php echo get_controller_file($controller, 'title.gif'); ?>">
+		<a name="top"></a>
+		<img src="<?php echo get_controller_file($controller, 'title.gif'); ?>" alt="<?php echo ucfirst(strtolower($controller)); ?>" />
 	</div>
 	<div id="navigation">
 		<?php include(NAVIGATION); ?>
@@ -48,8 +48,12 @@
 	</div>
 	<div id="badges">
 		<div class="badges_container">
-			<a href="http://www.php.net"><img src="/images/php-icon-black.gif"></a>
-			<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=82"><img border="0" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/80x15/white_1.gif"/></a>
+			<a href="http://www.php.net" title="Built with PHP">
+				<img src="/images/php-icon-black.gif" alt="PHP Logo" />
+			</a>
+			<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=82" title="Get Firefox!">
+				<img alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/80x15/white_1.gif"/>
+			</a>
 		</div>
 	</div>
 </body>

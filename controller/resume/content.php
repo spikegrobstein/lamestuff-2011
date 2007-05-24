@@ -64,79 +64,84 @@
 		<span class="company">National Flag &amp; Display</span> - <span class="location">New York, NY</span> <span class="time_spent">(August 2003 - Present)</span><br/>
 		<span class="company_description">Flags, Banners, Stage Backdrops, etc.</span>
 		<span class="position">Production Artist / IT Department</span>
-		<div class="job_description">
-			Prepare artwork for output on digital inkjet machines (on vinyl and fabric), screenprinting,
-			appliqu&eacute;, and embroidery. Redraw designs and logos. Operate plotter for appliqu&eacute; and
-			screenprinting jobs. Perform computer tech support for the PC and Mac network (Windows 2003
-			Fileserver, OSX and OS9 Macs, Windows 98/2000/XP) at all three company locations. Write scripts
-			for repetitive tasks in the art department (file labeling, jpeg proofs, emailing, and CD burning
-			for outsourced jobs) using Applescript and PERL. Assemble hardware and configured software for
-			FTP server running Gentoo Linux, including automatic email notification of file submissions.
-			Write web application for client file submissions. Create and design corporate website using
-			PHP, PERL, CSS and XHTML, with seamless integration with FTP server’s web front-end. Also handle
-			miscellaneous application and script development and documentation.
-		</div>
 	</p>
+	<div class="job_description">
+		Prepare artwork for output on digital inkjet machines (on vinyl and fabric), screenprinting,
+		appliqu&eacute;, and embroidery. Redraw designs and logos. Operate plotter for appliqu&eacute; and
+		screenprinting jobs. Perform computer tech support for the PC and Mac network (Windows 2003
+		Fileserver, OSX and OS9 Macs, Windows 98/2000/XP) at all three company locations. Write scripts
+		for repetitive tasks in the art department (file labeling, jpeg proofs, emailing, and CD burning
+		for outsourced jobs) using Applescript and PERL. Assemble hardware and configured software for
+		FTP server running Gentoo Linux, including automatic email notification of file submissions.
+		Write web application for client file submissions. Create and design corporate website using
+		PHP, PERL, CSS and XHTML, with seamless integration with FTP server’s web front-end. Also handle
+		miscellaneous application and script development and documentation.
+	</div>
 	<p>
 		<span class="company">Ivy League Graphics, LLC</span> - <span class="location">Plainfield, NJ</span> <span class="time_spent">(PT January 2005 - December 2005)</span><br/>
 		<span class="company_description">Garment Screenprinting / Embroidery</span>
 		<span class="position">Co-owner / Art Director / IT Manager / Sales</span>
-		<div class="job_description">
-			Involved in setting up the new business, including creating relationships with vendors
-			and purchasing computer and production hardware and software. Handled billing, collections,
-			tax information and sales. 
-		</div>
 	</p>
+	<div class="job_description">
+		Involved in setting up the new business, including creating relationships with vendors
+		and purchasing computer and production hardware and software. Handled billing, collections,
+		tax information and sales. 
+	</div>
+	
 	<p>
 		<span class="company">Vericon, LLC</span> - <span class="location">Bourbon, IN</span> <span class="time_spent">(PT August 2004 - February 2005)</span><br/>
 		<span class="company_description">ISP Turnkey Solutions / ISP Branding</span>
 		<span class="position">Lead Graphic Artist</span>
-		<div class="job_description">
-			Designed batches of related graphics for branded websites and software following
-			predetermined size requirements. Designs included web and print graphics.
-		</div>
 	</p>
+	<div class="job_description">
+		Designed batches of related graphics for branded websites and software following
+		predetermined size requirements. Designs included web and print graphics.
+	</div>
+	
 	<p>
 		<span class="company">Angry Lamb</span> - <span class="location">New York, NY</span> <span class="time_spent">(On Call December 2003 - October 2004)</span><br/>
 		<span class="company_description">On-Site Computer Technicians</span>
 		<span class="position">Computer Tech</span>
-		<div class="job_description">
-			Traveled to client offices to configure and / or analyze and repair computer problems, both
-			hardware and software. Worked in environments with mixed platforms (OSX, Windows 98/2000/XP,
-			and Windows 2003 Server). Wrote Applescripts to automate connecting to shared network drives.
-			Put together Microsoft Word documentation for employees to access shared network drives.
-		</div>
 	</p>
+	<div class="job_description">
+		Traveled to client offices to configure and / or analyze and repair computer problems, both
+		hardware and software. Worked in environments with mixed platforms (OSX, Windows 98/2000/XP,
+		and Windows 2003 Server). Wrote Applescripts to automate connecting to shared network drives.
+		Put together Microsoft Word documentation for employees to access shared network drives.
+	</div>
+
 	<p>
 		<span class="company">Viscotec USA, LLC.</span> - <span class="location">Kenilworth, NJ</span> <span class="time_spent">(August 2002 - July 2003)</span><br/>
 		<span class="company_description">Direct ink jet printing on fabrics</span>
 		<span class="position">Production Artist</span>
-		<div class="job_description">
-			Set up artwork for the RIP, contacted customers regarding questions and problems, wrote software
-			to automate DVD-RAM backup system for OSX using Obj-C and PERL, operated Solaris-based
-			RIP over Telnet, and operated printing machines. Also wrote a hand-coded HTML and PERL
-			template engine to create a new company web site. 
-		</div>
 	</p>
+	<div class="job_description">
+		Set up artwork for the RIP, contacted customers regarding questions and problems, wrote software
+		to automate DVD-RAM backup system for OSX using Obj-C and PERL, operated Solaris-based
+		RIP over Telnet, and operated printing machines. Also wrote a hand-coded HTML and PERL
+		template engine to create a new company web site. 
+	</div>
+
 	<p>
 		<span class="company">Jersey Graphics, Inc.</span> - <span class="location">Plainfield, NJ</span> <span class="time_spent">(August 2000 - August 2002, PT August 2003 - November 2005)</span><br/>
 		Currently A. Haupt / Jersey Graphics One, LLC - Maspeth, NY
 		<span class="company_description">Garment Screenprinting/ Embroidery</span>
 		<span class="position">Art Director</span>
-		<div class="job_description">
-			Responsible for scanning, artwork re-creation from customer hardcopy and original
-			artwork, color separations for screenprinting, invoicing, customer service, and training employees
-		</div>
 	</p>
+	<div class="job_description">
+		Responsible for scanning, artwork re-creation from customer hardcopy and original
+		artwork, color separations for screenprinting, invoicing, customer service, and training employees
+	</div>
+
 	<p>
 		<span class="company">DGM Computer Graphics</span> - <span class="location">Roselle, NJ</span> <span class="time_spent">(summers of 1996-1998)</span><br/>
 		<span class="company_description">Digital Prepress</span>
 		<span class="position">Artist/ Scanning Technician</span>
-		<div class="job_description">
-			Handled artwork re-creation, photo retouching and manipulation, color correction,
-			and flatbed and drum scanning of reflective art and transparencies.
-		</div>
 	</p>
+	<div class="job_description">
+		Handled artwork re-creation, photo retouching and manipulation, color correction,
+		and flatbed and drum scanning of reflective art and transparencies.
+	</div>
 
 	<h2>Personal Projects &amp; Accomplishments:</h2>
 	<p>
