@@ -340,6 +340,13 @@ ul.indent {
 	text-decoration: none;
 }
 
+.portfolio_object span.title {
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 4px;
+	display: block;
+}
+
 #portfolio_project img {
 	margin-left: auto;
 	margin-right: auto;

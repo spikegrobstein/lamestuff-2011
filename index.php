@@ -20,16 +20,17 @@
 		raise_error(404, 'controller', $controller);
 	}
 	
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Lamestuff::<?php readfile(get_controller_file($controller, 'title.html')); ?></title>
-	<link rel="stylesheet" href="/lamestuff.css" type="text/css" media="screen" title="default" charset="utf-8">
-	<base href="http://<?PHP echo $_SERVER['HTTP_HOST']; ?>">
-	<meta name="generator" content="TextMate http://macromates.com/">
-	<meta name="author" content="spike">
+	<link rel="stylesheet" href="/lamestuff.css" type="text/css" media="screen" title="default" charset="utf-8" />
+	<base href="http://<?PHP echo $_SERVER['HTTP_HOST']; ?>" />
+	<meta name="generator" content="TextMate http://macromates.com/" />
+	<meta name="author" content="spike" />
 	<!-- Visitors: <?php echo $counter; ?> -->
 </head>
 <body>

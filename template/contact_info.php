@@ -1,5 +1,5 @@
 
-<table cellspacing=0>
+<table>
 	<tr>
 		<td class="key">Name:</td>
 		<td class="val">Spike Grobstein</td>

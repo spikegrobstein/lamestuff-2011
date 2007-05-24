@@ -7,7 +7,7 @@
 </p>
 
 <div class="btn_container">
-	<a class="resume_btn" href="/resume" title="Work History and Skillset"
+	<a class="resume_btn" href="/resume" title="Work History and Skillset">
 		<img src="/images/resume_big-btn.gif" alt="R&eacute;sum&eacute;" />
 	</a>
 	<a class="portfolio_btn" href="/portfolio" title="Examples of Previous Work">

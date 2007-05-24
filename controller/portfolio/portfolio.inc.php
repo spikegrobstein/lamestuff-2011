@@ -67,7 +67,7 @@ function print_all_categories() {
 	$category_names = array_keys($category_list);
 	sort($category_names);
 	
-	?><div class="category_list"><span class="title">Categories:</title> 
+	?><div class="category_list"><span class="title">Categories:</span> 
 	<?php
 	foreach($category_names as $cat) {
 		?>
@@ -84,15 +84,15 @@ function print_portfolio_item($item_name) {
 	?>
 	<div class="portfolio_object">
 		<a href="/portfolio/<?php echo $item_name; ?>/" title="<?php echo $item_name; ?>">
-			<img src="<?php echo PROJECT_DIR.$item_name; ?>/thumbnail.jpg">
-			<h2><?php include(PROJECT_DIR."$item_name/title.php"); ?></h2>
+			<img src="<?php echo PROJECT_DIR.$item_name; ?>/thumbnail.jpg" alt="<?php echo $item_name ?>" />
+			<span class="title"><?php include(PROJECT_DIR."$item_name/title.php"); ?></span>
 		</a>
 		<div class="description"><?php include(PROJECT_DIR."$item_name/description.php"); ?></div>
 	</div>
 	<?php
 }
 
-function pimg_tag($img_name, $comment = '') {
+function pimg_tag($img_name, $comment = '', $alt='') {
 	/*
 	**	prints an img tag for the image.
 	*/
@@ -103,7 +103,7 @@ function pimg_tag($img_name, $comment = '') {
 		?><div class="comment"><?php echo $comment; ?>:</div><?php
 	}
 	?>
-		<img src="<?php echo PROJECT_DIR."$project/$img_name" ?>" />
+		<img src="<?php echo PROJECT_DIR."$project/$img_name" ?>" alt="<?php echo $alt; ?>"/>
 	<?php
 }
 
