@@ -1,7 +1,10 @@
 <div id="resume">
 	<div class="info_header">
 		<div class="download_link">
-			<a href="/controller/resume/spikegrobstein_resume_20070116.pdf">Download PDF</a>
+			<a href="/controller/resume/spikegrobstein_resume_20070116.pdf">
+				<img src="/images/pdf_icon.png" alt="PDF Icon" />
+				<span>Download PDF</span>
+			</a>
 		</div>
 		
 		<div class="contact_info">
