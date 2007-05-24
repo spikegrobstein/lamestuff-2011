@@ -151,7 +151,7 @@
 	<p>
 		Contract work at a private school:
 	</p>
-	<ul>
+	<ul class="indent">
 		<li>
 			Troubleshooting on a medium-sized network (over 200 nodes).
 		</li>
@@ -188,7 +188,7 @@
 	<p>
 		Miscellaneous contract work configuring machines in mixed environments:
 	</p>
-	<ul>
+	<ul class="indent">
 		<li>
 			Set up OSX Server to host Bugzilla for company’s internal bug reporting and handling framework.
 		</li>

@@ -286,6 +286,11 @@ img {
 	border: 0;
 }
 
+ul.indent {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
 .key {
 	font-weight: bold;
 	padding-right: 5px;
