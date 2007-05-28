@@ -1,5 +1,10 @@
 <?php
 
+//only define APP if it's not already defined. this will allow us to override our default location.
+if (!defined('APP')) {
+	define('APP', '../app/'); //the app directory
+}
+
 //define constants... should be basically self explanitory...
 define('COUNTER_FILENAME', 'counter.dat');
 define('COUNTER_FILE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . COUNTER_FILENAME);
@@ -7,25 +12,55 @@ define('COUNTER_FILE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . COUNTER_FILENAME);
 define('DEFAULT_CONTROLLER', 'index');
 
 //directory and file names
-define('CONTROLLER', 'controller/');
-define('TEMPLATE', 'template/');
-define('PARTIAL', 'partial/');
+define('CONTROLLER', 'controller');
+define('TEMPLATE', 'template');
+define('PARTIAL', 'partial');
+define('INCLUDE', 'include');
 
 define('TITLE_FILENAME', 'title.php');
 
-define('FOOTER', TEMPLATE.'footer.php');
-define('NAVIGATION', TEMPLATE.'navigation.php');
-
-function get_controller_file($controller, $file) {
-	return CONTROLLER.$controller.'/'.$file;
+function include_file($type, $name) {
+	/*
+	**	include a file of $type (name of folder that contains it)
+	**	$name should be the base_name of the file (without extension)
+	**	if $type/$name is a directory, it will include the .php file from inside that folder
+	**	otherwise, it will include $type/$name.php
+	**	if not found, it will print an error.
+	*/
+	
+	$path = APP . '/' . $type . '/' . $name;
+	
+	//check if the requested thing is a directory, if so, recursively call and return.
+	if (is_dir($path)) {
+		include_file($type . '/' . $name, $name);
+		return;
+	}
+	
+	//append .php to the requested path
+	$path .= '.php';
+	
+	if (!file_exists($path)) {
+		//if debug is defined, we want to know the filename of the missing template.
+		if (defined('DEBUG')) {
+			raise_error("Error including $type ($name)...", array("Missing $type file"));
+		} else {
+			raise_error("Error including $type...", array("Missing $type file"));
+		}
+	} else {
+		include $path;
+	}
 }
 
-function get_partial($partial_name) {
-	return PARTIAL.$partial_name.'.php';
+function include_partial($name) {
+	include_file(PARTIAL, $name);
 }
 
-function include_partial($partial_name) {
-	include get_partial($partial_name);
+function include_controller($name) {
+	include_file(CONTROLLER, $name);
+}
+
+function include_inc($name) {
+	include_file(INCLUDE, $name);
 }
 
 function get_request() {
