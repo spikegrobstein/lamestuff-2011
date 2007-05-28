@@ -68,6 +68,10 @@ function increment_counter() {
 	**	reads the counterfile, increments it, writes it, then returns the new value.
 	*/
 	
+	if (!file_exists(COUNTER_FILE_PATH)) {
+		return -1; //error
+	}
+	
 	$val = read_counter();
 	$val++;
 	
@@ -84,10 +88,14 @@ function read_counter() {
 	*/
 	
 	//check if counter file exists... if not, print an error.
+	if (!file_exists(COUNTER_FILE_PATH)) {
+		return -1;
+	}
+	
 	//this should probably be updated so it prints a better error, or better yet, silently fails
 	if (!($ifile = fopen(COUNTER_FILE_PATH, "r"))) {
 		echo "ERROR opening file";
-		return 0;
+		return -1;
 	}
 	
 	$val = null;
