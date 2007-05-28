@@ -17,7 +17,7 @@ define('TEMPLATE', 'template');
 define('PARTIAL', 'partial');
 define('INC', 'include');
 
-define('TITLE_FILENAME', 'title.php');
+include_once APP.'include/title.php';
 
 function include_file($type, $name) {
 	/*
@@ -181,7 +181,7 @@ function raise_error($error_code, $error_type, $path) {
 	} else {
 		global $request;
 		$request = split('/', $error_code.'/'.$error_type.'/'.$error_path);
-		include(get_controller_file('error', 'content.php'));
+		include_controller('error');
 	}
 }
 

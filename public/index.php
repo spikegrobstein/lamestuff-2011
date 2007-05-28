@@ -26,7 +26,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Lamestuff::<?php print_title($controller); ?></title>
+	<title>Lamestuff::<?php echo get_title($request); ?></title>
 	<link rel="stylesheet" href="/lamestuff.css" type="text/css" media="screen" title="default" charset="utf-8" />
 	<base href="http://<?PHP echo $_SERVER['HTTP_HOST']; ?>" />
 	<meta name="generator" content="TextMate http://macromates.com/" />
@@ -42,7 +42,7 @@
 		<?php include_partial('navigation'); ?>
 	</div>
 	<div id="content">
-		<?php include_controller('content'); ?>
+		<?php include_controller($controller); ?>
 	</div>
 	<div id="footer">
 		<?php include_partial('footer'); ?>

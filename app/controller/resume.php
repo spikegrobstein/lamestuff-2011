@@ -8,7 +8,7 @@
 		</div>
 		
 		<div class="contact_info">
-			<?php include("template/contact_info.php"); ?>
+			<?php include_partial('contact_info'); ?>
 		</div>
 
 	</div>
