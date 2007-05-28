@@ -15,7 +15,7 @@ define('DEFAULT_CONTROLLER', 'index');
 define('CONTROLLER', 'controller');
 define('TEMPLATE', 'template');
 define('PARTIAL', 'partial');
-define('INCLUDE', 'include');
+define('INC', 'include');
 
 define('TITLE_FILENAME', 'title.php');
 
@@ -60,7 +60,15 @@ function include_controller($name) {
 }
 
 function include_inc($name) {
-	include_file(INCLUDE, $name);
+	include_file(INC, $name);
+}
+
+function controller_exists($name) {
+	return file_exists(APP.CONTROLLER.'/'.$name);
+}
+
+function print_title($controller) {
+	include (APP.'controller/'.$controller.'/title.html');
 }
 
 function get_request() {
