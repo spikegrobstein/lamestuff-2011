@@ -64,7 +64,7 @@ function include_inc($name) {
 }
 
 function controller_exists($name) {
-	return file_exists(APP.CONTROLLER.'/'.$name);
+	return file_exists(APP.CONTROLLER.'/'.$name) || file_exists(APP.CONTROLLER.'/'.$name.'.php');
 }
 
 function print_title($controller) {
