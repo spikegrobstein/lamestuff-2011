@@ -51,7 +51,7 @@
 		<li>
 			Mastery of Photoshop, ImageReady, Illustrator, GoLive, AfterEffects, Premier, Quark XPress,
 			Freehand, InDesign, Microsoft Office (some Excel scripting), BBEdit, XCode, Quickbooks,
-			FilemakerPro, XHTML, CSS, LDAP, MySQL, CVS, Firewalls (iptables).
+			FilemakerPro, XHTML, CSS, LDAP, MySQL, CVS/SVN, Firewalls (iptables).
 		</li>
 		<li>
 			Programming skills include REALbasic, Java, C, Objective-C (Cocoa), PERL, BASH, Applescript,

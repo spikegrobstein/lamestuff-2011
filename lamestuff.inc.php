@@ -9,6 +9,7 @@ define('DEFAULT_CONTROLLER', 'index');
 //directory and file names
 define('CONTROLLER', 'controller/');
 define('TEMPLATE', 'template/');
+define('PARTIAL', 'partial/');
 
 define('TITLE_FILENAME', 'title.php');
 
@@ -17,6 +18,14 @@ define('NAVIGATION', TEMPLATE.'navigation.php');
 
 function get_controller_file($controller, $file) {
 	return CONTROLLER.$controller.'/'.$file;
+}
+
+function get_partial($partial_name) {
+	return PARTIAL.$partial_name.'.php';
+}
+
+function include_partial($partial_name) {
+	include get_partial($partial_name);
 }
 
 function get_request() {

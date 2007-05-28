@@ -502,6 +502,20 @@ div.portfolio_navigator a:hover {
 
 /*************** END PORTFOLIO STUFF ******************/
 
+/*********** START CONTACT FORM STUFF *****************/
+
+#contact .contact_form {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+/*********** END CONTACT FORM STUFF *****************/
+
 /****************** START ERROR STUFF *****************/
 div.error {
 	border: 2px solid #f00;
