@@ -1,7 +1,7 @@
 <?php
 
-define('PORTFOLIO_DIR', CONTROLLER.'portfolio/');
-define('PROJECT_DIR', PORTFOLIO_DIR.'projects/');
+//define('PORTFOLIO_DIR', CONTROLLER.'portfolio/');
+define('PROJECT_DIR', PUBLIC_DIR.'projects/');
 
 function init_portfolio_lists() {
 	if ($handle = opendir(PROJECT_DIR)) { //open the directory list...

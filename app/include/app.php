@@ -11,6 +11,8 @@ define('COUNTER_FILE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . COUNTER_FILENAME);
 
 define('DEFAULT_CONTROLLER', 'index');
 
+define('PUBLIC_DIR', './');
+
 //directory and file names
 define('CONTROLLER', 'controller');
 define('TEMPLATE', 'template');
