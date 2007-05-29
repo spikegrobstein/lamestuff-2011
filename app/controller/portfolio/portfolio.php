@@ -1,8 +1,11 @@
 <?php
 
-include("controller/portfolio/portfolio.inc.php");
+include_inc('portfolio');
 
 global $project;
+
+$request = get_request();
+array_shift($request); //drop the first element... ('portfolio')
 
 $project = array_shift($request);
 

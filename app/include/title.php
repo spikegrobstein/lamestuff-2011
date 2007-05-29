@@ -1,13 +1,8 @@
 <?php
 
 function get_title($request) {
-	if (count($request) == 0) {
-		$page = 'index';
-	} else {
-		$page = $request[0];
-	}
-
-	switch (strtolower($page)) {
+	
+	switch (strtolower($request[0])) {
 		case 'index':
 			return 'Index';
 		case 'resume':
@@ -19,6 +14,7 @@ function get_title($request) {
 		default:
 			return 'UNKNOWN PAGE!';
 	}
+	
 }
 
 ?>
