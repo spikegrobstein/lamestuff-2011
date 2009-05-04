@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  description: "I accomplish stuff"
+  
+b:
+  id: 2
+  description: "I accomplish a lot of stuff"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

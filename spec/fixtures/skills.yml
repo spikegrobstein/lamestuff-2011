@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  description: "widdle"
+  
+b:
+  id: 2
+  description: "woddle"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

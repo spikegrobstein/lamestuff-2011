@@ -1,0 +1,12 @@
+<% content_for :heading do -%>
+Projects: <%= @category.name %>
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to 'Edit', edit_category_path(@category) %>
+<% end -%>
+
+<ul id="projects">
+<%= render :partial => 'portfolio/project', :collection => @projects %>
+</ul>
+

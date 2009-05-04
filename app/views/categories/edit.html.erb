@@ -1,0 +1,23 @@
+<% content_for :heading do -%>
+	Edit Category
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', categories_path %>
+<% end-%>
+
+<% form_for @category do |f| -%>
+	<%= f.error_messages %>
+
+	<%= render :partial => "form", :object => f %>
+	
+	<div>
+		<%= f.submit 'Save', :disable_with => 'Saving...' %>
+	</div>
+<% end -%>
+
+<ul>
+	<% @category.projects.each do |project| -%>
+	<li><%= link_to h(project.title), project_path(project) %></li>
+	<% end -%>
+</ul>

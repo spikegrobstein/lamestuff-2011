@@ -1,0 +1,94 @@
+<% content_for :actions do -%>
+	<%= link_to 'Objectives &rarr;', objectives_path %>
+	<%= link_to 'Certifications &rarr;', certifications_path %>
+	<%= link_to 'Skills &rarr;', skills_path %>
+	<%= link_to 'Experience &rarr;', experiences_path %>
+	<%= link_to 'Accomplishments &rarr;', accomplishments_path %>
+<% end-%>
+
+<% content_for :extra_navigation do -%>
+	<ul>
+		<li><%= link_to "#{image_tag 'pdf.gif'}Download as PDF", formatted_resume_path('pdf')%></li>
+	</ul>
+<% end -%>
+
+<div id="resume">
+	
+
+
+
+<%#= render :partial => 'shared/contact_block', :object => @contact_infos %>
+	
+<% unless @objectives.size == 0 -%>
+<div id="objectives">
+	<h3>Objective</h3>
+	<ul>
+		<% @objectives.each do |objective| -%>
+		<li><%= h objective.description %></li>
+		<% end -%>
+	</ul>
+</div>
+<% end -%>
+
+<% unless @certifications.size == 0 -%>
+<div id="certifications">
+	<h3>Education / Certifications</h3>
+	<ul>
+		<% @certifications.each do |certification| -%>
+		<li><%= h certification.description %></li>
+		<% end -%>
+	</ul>
+</div>
+<% end -%>
+
+<% unless @skills.size == 0 -%>
+<div id="skills">
+	<h3>Skills</h3>
+	<ul>
+		<% @skills.each do |skill| -%>
+		<li><%= h skill.description %></li>
+		<% end -%>
+	</ul>
+</div>
+<% end -%>
+
+<% unless @experiences.size == 0 -%>
+<div id="experiences">
+	<h3>Work Experience</h3>
+	<ul>
+		<% @experiences.each do |experience| -%>
+		<li>
+			<div class="company_info">
+				<span class="company"><%= h experience.place %></span> (<span class="company_description"><%= h experience.industry %></span>) - <span class="location"><%= h experience.location %></span>
+			</div>
+			<span class="position"><%= h experience.work_position %></span>
+			<span class="time_spent">
+				(
+				<%= Date::MONTHNAMES[experience.start_date.month] %> <%= experience.start_date.year %> -
+				<% if experience.end_date > Date.today -%>
+				present
+				<% else -%>
+				<%= Date::MONTHNAMES[experience.end_date.month] %> <%= experience.end_date.year %>
+				<% end -%>
+				)
+			</span>
+			<p>
+				<%= h experience.description %>
+			</p>
+		</li>
+		<% end -%>
+	</ul>
+</div>
+<% end -%>
+
+<% unless @accomplishments.size == 0 -%>
+<div id ="accomplishments">
+	<h3>Personal Projects &amp; Accomplishments</h3>
+	<ul>
+		<% @accomplishments.each do |accomplishment| -%>
+		<li><%= markdown accomplishment.description %></li>
+		<% end -%>
+	</ul>
+</div>
+<% end -%>
+</div>

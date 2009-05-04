@@ -1,0 +1,443 @@
+body {
+	background-color: #222;
+	padding: 0;
+	margin: 0;
+	font: 12px "Helvetica", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	text-align: center;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a img {
+	border: none;
+	margin-right: 3px;
+}
+
+p {
+	text-indent: 10px;
+	text-align: justify;
+	line-height: 1.25em;
+	
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.label {
+	font-weight: bold;
+}
+
+fieldset {
+	width: 300px;
+	margin: auto;
+	padding: 10px;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+form div {
+	margin-bottom: 10px;
+}
+
+#flash_notice {
+	background-color: #020;
+	color: #2f2;
+	font-weight: bold;
+	width: 800px;
+	margin: auto;
+	padding: 1px 0 1px 0;
+}
+
+#flash_error {
+	background-color: #200;
+	color: #f22;
+	font-weight: bold;
+	width: 800px;
+	margin: auto;
+	padding: 1px 0 1px 0;
+}
+
+#errorExplanation {
+	color: white;
+	background-color: #b66;
+	border-bottom: 2px solid #a55;
+}
+
+#errorExplanation h2 {
+	background-color: #a55;
+}
+
+#errorExplanation p {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#header {
+	background-color: black;
+	background-image: url(/images/spikegrobstein_bg.gif);
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	width: 800px;
+	margin: auto;
+	vertical-align: middle;
+	text-align: left;
+}
+
+#header_info {
+	float: right;
+	text-align: right;
+	padding: 5px;
+}
+
+#header_info span {
+	display: block;
+	color: #ddd;
+	font-size: 18px;
+}
+
+#header_info span.spike {
+	display: inline;
+	color: white;
+}
+
+#header_info span.grobstein {
+	display: inline;
+	font-weight: bold;
+}
+
+#navigation {
+	background-color: #ddd;
+	width: 800px;
+	margin: auto;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#navigation ul#main_nav {
+	margin: 0;
+	list-style: none;
+}
+
+#navigation ul li {
+	display: inline;
+	margin-right: 10px;
+
+}
+
+#navigation ul#main_nav a {
+	color: #222;
+	font-weight: normal;
+	padding: 3px 5px 3px 5px;
+}
+
+#navigation ul#main_nav a:hover {
+	background-color: white;
+	text-decoration: none;
+}
+
+#navigation ul#main_nav li a.current {
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	padding-top: 2px;
+}
+
+#navigation ul#main_nav a.current:hover {
+	color: black;
+	background-color: white;
+}
+
+#extra_navigation {
+	width: 800px;
+	background-color: black;
+	margin: auto;
+	padding: 0;
+}
+
+#extra_navigation ul {
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style: none;
+	border-bottom: 1px solid #666;
+}
+
+#extra_navigation ul li {
+	display: inline;
+	margin-right: 10px;
+}
+
+#extra_navigation a {
+	font-weight: normal;
+}
+
+#extra_navigation a.current {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#admin_actions {
+	width: 800px;
+	background-color: #000;
+	text-align: left;
+	margin: auto;
+	border-bottom: 1px solid #222;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#admin_actions a {
+	margin-left: 10px;
+}
+
+#content {
+	text-align: left;
+	background-color: black;
+	width: 800px;
+	margin: auto;
+	color: #ddd;
+}
+
+#content_wrapper {
+	padding: 10px;
+	
+}
+
+#left_column {
+	margin-left: 5px;
+	width: 375px;
+	float: left;
+	margin-right: 20px;
+}
+
+#right_column {
+	width: 375px;
+	float: left;
+}
+
+#footer {
+	background-repeat: no-repeat;
+	background-image: url(/images/guillotine.gif);
+	background-color: #222;
+	height: 223px;
+	margin: auto;
+	width: 800px;
+}
+
+#footer_text {
+	margin: auto;
+	width: 800px;
+	margin: auto;
+	color: #000;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: 80%;
+	padding-bottom: 10px;
+}
+
+#resume {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#resume p {
+	text-indent: 0;
+}
+
+#resume #experiences p {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 5px;
+}
+
+#resume .company {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#resume .time_spent {
+	font-style: italic;
+}
+
+#categories {
+	margin: auto;
+	text-align: center;
+	padding: 0;
+	list-style: none;
+}
+
+#categories li {
+	margin: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	padding: 5px;
+	display: inline-block;
+	background-color: #222;
+	border-bottom: 2px solid #333;
+}
+
+form #categories {
+	text-align: left;
+	margin: 5px;
+}
+
+form #categories .category {
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #997;
+}
+
+#projects {
+	list-style: none;
+	padding: 0;
+}
+
+#projects .project {
+	width: 380px;
+	background-color: #222;
+	float: left;
+	margin: 5px;
+}
+
+#projects .project h3 {
+	border-bottom: 1px solid black;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	margin: 0;
+	margin-left: 5px;
+}
+
+#projects .project p {
+	text-indent: 0;
+	margin: 5px;
+}
+
+#projects .project .thumb_container {
+	width: 80px;
+	height: 80px;
+	margin: 5px;
+	/*background-color: #ddd;*/
+	float: left;
+}
+
+#projects .project img {
+	max-width: 80px;
+	border: none;
+}
+
+#project #categories {
+	float: left;
+	width: 150px;
+	background-color: #111;
+	border-right: 2px solid #333;
+	margin-right: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+#project #categories h4 {
+	margin: 5px;
+	color: #666;
+}
+
+#project #categories ul {
+	margin: 0;
+	padding: 0;
+}
+
+#project #categories ul li {
+	background-color: transparent;
+	margin: 0;
+	margin-bottom: 3px;
+	padding: 0;
+	border: none;
+	font-size: 10px;
+	display: block;
+}
+
+#project #description {
+	float:none;
+}
+
+#project #elements {
+	margin: 0;
+	padding: 0;
+}
+
+#project #elements li {
+	background-color: #111;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	list-style: none;
+}
+
+#project #elements li .blurb {
+	float: left;
+	width: 200px;
+	margin-left: 10px;
+	text-align: left;
+}
+
+#project #elements li .blurb p {
+	margin-top: 0;
+}
+
+#project #elements img {
+	/*border: 1px outset #997;*/
+	margin: auto;
+	max-width: 500px;
+}
+
+#project #copyright_info {
+	font-size: 10px;
+	text-indent: 0;
+	text-align: center;
+	background-color: #111;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+table#contact_info {
+	border: 2px solid #333;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+table#contact_info tr:hover {
+	background-color: #111;
+}
+
+table#contact_info td {
+	border-bottom: 1px solid #222;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.download_link {
+	padding: 3px;
+	border: 2px solid #333;
+	float: left;
+}
+

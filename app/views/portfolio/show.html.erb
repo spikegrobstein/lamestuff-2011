@@ -1,0 +1,63 @@
+<% content_for :heading do -%>
+	<%= @project.title %>
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', portfolio_path %>
+	<%= link_to '+ New', new_project_path %>
+	<%= link_to 'Edit', edit_project_path(@project) %>
+	<%= link_to 'Delete', project_path(@project), :method => 'delete', :confirm => 'Are you sure?' %>
+	
+<% end-%>
+
+<% content_for :project_navigation do -%>
+	<% unless @next_project.nil? -%>
+	<%= link_to 'Next Project &rarr;', {:controller => 'portfolio', :action => 'show', :name => @next_project.url_path}, :class => 'next button' %>
+	<% else -%>
+	<span class="next disabled_button">Next Project &rarr;</span>
+	<% end -%>
+	
+	<% unless @previous_project.nil? -%>
+	<%= link_to '&larr; Previous Project', {:controller => 'portfolio', :action => 'show', :name => @previous_project.url_path}, :class => 'prev button' %>
+	<% else -%>
+	<span class="prev disabled_button">&larr; Previous Project</span>
+	<% end -%>
+<% end -%>
+
+<div id="project">
+
+	<div id="categories">
+		<h4>Categories</h4>
+		<ul>
+			<% @project.categories.each do |category| -%>
+			<li><%= link_to category.name, :controller => 'categories', :action => 'show', :name => category.url_path %></li>
+			<% end -%>
+		</ul>
+	</div>
+
+	<div id="description">
+		<%= markdown @project.description %>
+	</div>
+	
+	<div style="clear:both; float:none"><!-- BEES! --></div>
+
+	<ol id="elements">
+		<% @project.elements.each do |element| -%>
+		<li>
+			<div class="blurb">
+				<%= markdown element.blurb %>
+			</div>
+			<%= image_tag element.public_filename %>
+			<div style="clear:both; float:none"><!-- yup. --></div>
+		</li>
+		<% end -%>
+		
+	</ol>
+
+	<p id="copyright_info">
+		All artwork is &copy; Spike Grobstein or its respective copyright holder.<br/>
+		If you'd like to use any of the artwork from this project, please <%= link_to 'contact me', contact_infos_path %>
+		to request permission.
+	</p>
+
+</div>

@@ -1,1 +1,0 @@
-A magazine advertisement that I created for the Free Methodist Church's dialup and VoIP service.

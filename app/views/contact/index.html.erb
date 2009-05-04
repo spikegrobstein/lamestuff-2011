@@ -1,0 +1,12 @@
+
+<% content_for :actions do -%>
+	<%= link_to '+ New', new_contact_info_path %>
+<% end-%>
+
+<% content_for :extra_navigation do -%>
+	<ul>
+		<li><a href="/spike_grobstein.vcf"><%= image_tag 'vcf.gif' %>Download vCard</a></li>
+	</ul>
+<% end -%>
+
+<%= render :partial => 'shared/contact_block', :object => @contact_infos %>

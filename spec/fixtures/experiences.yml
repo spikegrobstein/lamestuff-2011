@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  place: "here"
+  work_position: "art director"
+  location: "new york, ny"
+  industry: "textiles"
+  description: "blah blah blah"
+  
+b:
+  id: 2
+  place: "there"
+  work_position: "production director"
+  location: "somewhere, nj"
+  industry: "embroidery"
+  description: "bloo bloo bloo"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

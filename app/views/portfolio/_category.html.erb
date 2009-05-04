@@ -1,0 +1,20 @@
+<div class="category">
+<% fields_for 'project[category_attributes][]', category do |c| -%>
+	<%= c.error_messages %>
+
+	<div>
+		<div>
+			<%= c.label :category_id %>
+			<%= c.select :category_id, @category_list, {:prompt => 'Select a category...'}, :index => nil %>
+		</div>
+		
+		<% if category.new_record? -%>
+			<%= link_to_function '[-] Remove', "this.up('.category').remove()" %>
+		<% else -%>
+			<%= link_to_function '[-] Remove', "mark_for_destroy(this, 'category')" %>
+			<%= c.hidden_field :id, :index => nil %>
+			<%= c.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+		<% end -%>
+	</div>
+<% end -%>
+</div>

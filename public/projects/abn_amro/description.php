@@ -1,1 +1,0 @@
-Flag which is to be hung outside of the New York Stock Exchange advertizing the ABN-AMRO Team in the 2006 Volvo Ocean Race.

@@ -1,0 +1,21 @@
+<% content_for :heading do -%>
+	Skills
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '+ New', new_skill_path %>
+<% end-%>
+
+<ul>
+	<% @skills.each do |skill| -%>
+	<li>
+		<%= link_to '&uArr;', :action => 'move', :id => skill, :move => 'move_to_top' %>
+		<%= link_to '&uarr;', :action => 'move', :id => skill, :move => 'move_higher' %>
+		<%= link_to '&darr;', :action => 'move', :id => skill, :move => 'move_lower' %>
+		<%= link_to '&dArr;', :action => 'move', :id => skill, :move => 'move_to_bottom' %>
+		<%= skill.description %>
+		<%= link_to '[edit]', edit_skill_path(skill) %>
+		<%= link_to '[X]', skill_path(skill), :method => 'delete', :confirm => 'Are you sure?' %>
+	</li>
+	<% end -%>
+</ul>

@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  description: "wonk"
+  
+b:
+  id: 2
+  description: "wadda"
+
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  project_id: 1
+  blurb: 'some boobs are here'
+  
+b:
+  id: 2
+  project_id: 1
+  blurb: 'here be some more boobs'
+  
+c:
+  id: 3
+  project_id: 2
+  blurb: 'some tasty coffee'
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

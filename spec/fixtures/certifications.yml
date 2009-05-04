@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  description: "ACE in this"
+  
+b:
+  id: 2
+  description: "ACE in that"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

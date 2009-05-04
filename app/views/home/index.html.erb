@@ -1,0 +1,18 @@
+<% content_for :heading do -%>
+	Welcome to my site
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to 'Edit', :action => 'edit' %>
+<% end -%>
+
+<div id="left_column">
+	<%= markdown @left_column %>
+</div>
+
+<div id="right_column">
+	<%= markdown @right_column %>
+</div>
+<div style="clear:both; float: none"><!-- bringing news of war! --></div>
+
+<%#= markdown @home_message.description %>

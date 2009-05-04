@@ -1,1 +1,0 @@
-<?php pimg_tag("AFX-logo.jpg"); ?>

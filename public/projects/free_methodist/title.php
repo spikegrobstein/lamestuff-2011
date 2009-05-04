@@ -1,1 +1,0 @@
-Free Methodist Church

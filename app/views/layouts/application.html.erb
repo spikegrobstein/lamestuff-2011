@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>spike.grobste.in</title>
+	
+	<%= javascript_include_tag :defaults %>
+	<%= stylesheet_link_tag 'lamestuff' %>
+	
+</head>
+<body>
+	<%= render :partial => 'layouts/header' %>
+	<%= render :partial => 'layouts/navigation' %>
+	<%= render :partial => 'layouts/extra_navigation' %>
+	<%= render :partial => 'layouts/flash_messages' %>
+	
+	<div id="content">
+	<div id="content_wrapper">
+		
+		<h2><%= yield :heading %></h2>
+
+		<%= yield %>
+		
+		<div style="clear: both; float: none"><!-- omigod! --></div>
+	</div>
+	</div>
+	
+	<div id="footer"><!-- meow --></div>
+	<div id="footer_text">
+		&copy;2009 Lamestuff.com / Spike Grobstein
+	</div>
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5702404-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

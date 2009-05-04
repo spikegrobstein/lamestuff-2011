@@ -1,0 +1,17 @@
+<% content_for :heading do -%>
+	New Skill
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', skills_path %>
+<% end-%>
+
+<% form_for @skill do |f| -%>
+	<%= f.error_messages %>
+
+	<%= render :partial => "form", :object => f %>
+	
+	<div>
+		<%= f.submit 'Save', :disable_with => 'Saving...' %>
+	</div>
+<% end -%>

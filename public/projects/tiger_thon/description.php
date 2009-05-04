@@ -1,1 +1,0 @@
-Art I created for screen printed tee shirts for Towson University.

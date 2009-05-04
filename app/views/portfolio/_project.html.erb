@@ -1,0 +1,24 @@
+<li class="project">		
+	<div class="thumb_container">
+		<% unless project.filename.nil? -%>
+		<%= link_to image_tag(project.public_filename), :controller => 'portfolio', :action => 'show', :name => project.url_path %>
+		<% end -%>
+	</div>
+	<h3>
+		<% unless @current_user.nil? -%>
+		<%= link_to '&uArr;', :action => 'move', :id => project, :move => 'move_to_top' %>
+		<%= link_to '&uarr;', :action => 'move', :id => project, :move => 'move_higher' %>
+		<%= link_to '&darr;', :action => 'move', :id => project, :move => 'move_lower' %>
+		<%= link_to '&dArr;', :action => 'move', :id => project, :move => 'move_to_bottom' %>
+		<% end -%>
+		<%= link_to h(project.title), :controller => 'portfolio', :action => 'show', :name => project.url_path %>
+		<% unless @current_user.nil? -%>
+		<%= link_to '[edit]', edit_project_path(project) %>
+		<%= link_to '[X]', project_path(project), :method => 'delete', :confirm => 'Are you sure?' %>
+		<% end -%>
+	</h3>
+	<p>
+		<%= markdown(truncate(project.description.split(/\n/)[0], 120)) %>
+	</p>
+	<div style="clear: both"><!-- wonk wonk wonk --></div>
+</li>

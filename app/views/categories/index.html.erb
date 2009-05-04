@@ -1,0 +1,27 @@
+<% content_for :heading do -%>
+	Categories
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '+ New', new_category_path %>
+<% end -%>
+
+<% content_for :extra_navigation do -%>
+	<ul>
+		<li><%= link_to 'projects', projects_path %></li>
+		<li><%= link_to 'categories', categories_path, :class => 'current' %></li>
+	</ul>
+<% end -%>
+
+<ul id="categories">
+	<% @categories.each do |category| %>
+	<li>
+		<%= link_to category.name, :controller => 'categories', :action => 'show', :name => category.url_path%>
+		(<%= pluralize(category.projects.count, 'item') %>)
+		<% unless @current_user.nil? -%>
+			<%= link_to '[edit]', edit_category_path(category) %>
+			<%= link_to '[X]', category_path(category), :method => 'delete', :confirm => 'Are you sure?' %>
+		<% end -%>
+	</li>
+	<% end -%>
+</ul>

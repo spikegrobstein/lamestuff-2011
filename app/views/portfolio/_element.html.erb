@@ -1,0 +1,39 @@
+<div class="element">
+<% fields_for 'project[element_attributes][]', element do |e| -%>
+	<%= e.error_messages %>
+
+	<div>
+		<% unless element.filename.nil? -%>
+		<%= image_tag element.public_filename %>
+		<% end -%>
+		
+		<% unless element.new_record? -%>
+		<div class="position">
+			<%= link_to '&uArr;', :action => 'move', :id => element, :move => 'move_to_top' %>
+			<%= link_to '&uarr;', :action => 'move', :id => element, :move => 'move_higher' %>
+			<%= link_to '&darr;', :action => 'move', :id => element, :move => 'move_lower' %>
+			<%= link_to '&dArr;', :action => 'move', :id => element, :move => 'move_to_bottom' %>
+		</div>
+		<% end -%>
+		
+		<div>
+			<%= e.label :blurb %>
+			<%= e.text_area :blurb, :rows => 4, :index => nil %>
+		</div>
+		
+		<div>
+			<%= e.label :uploaded_data, 'Artwork' %>
+			<%= e.file_field :uploaded_data, :index => nil %>
+		</div>
+		
+		<% if element.new_record? -%>
+			<%= link_to_function '[-] Remove', "this.up('.element').remove()" %>
+		<% else -%>
+			<%= link_to_function '[-] Remove', "mark_for_destroy(this, 'element')" %>
+			<%= e.hidden_field :id, :index => nil %>
+			<%= e.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+		<% end -%>
+	</div>
+<% end -%>
+<div style="clear: both"><!-- give me chicken, give me liver... meowmix meowmix, please deliver! --></div>
+</div>

@@ -1,1 +1,0 @@
-Atwood Oceanics NYSE Backdrop

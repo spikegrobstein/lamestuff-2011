@@ -1,0 +1,17 @@
+<% content_for :heading do -%>
+	Edit Accomplishment
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', accomplishments_path %>
+	<%= link_to 'Delete', accomplishment_path(@accomplishment), :method => 'delete', :confirm => 'Are you sure?'%>
+<% end-%>
+
+<% form_for @accomplishment do |f| -%>
+	<%= f.error_messages %>
+
+	<%= render :partial => "form", :object => f %>
+	<div>
+		<%= f.submit 'Save', :disable_with => 'Saving...' %>
+	</div>
+<% end -%>

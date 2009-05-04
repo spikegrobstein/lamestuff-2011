@@ -1,0 +1,6 @@
+testuser:
+  id: 1
+  login: "testuser"
+  email: "testuser@lamestuff.com"
+  crypted_password: "0a77a36f39435860211bec1fbd813ae329ad0236" #test
+  salt: "5a1003e8340dda2472008eb297cbeb45a01982b0"

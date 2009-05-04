@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  title: 'Boobs'
+  description: 'this is how I make da boobs'
+  
+b:
+  id: 2
+  title: 'mugs'
+  description: 'I made some mugs today.'
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

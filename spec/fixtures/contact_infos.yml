@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  key: email
+  value: spike666@mac.com
+  
+b:
+  id: 2
+  key: location
+  value: somewhere
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

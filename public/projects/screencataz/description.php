@@ -1,1 +1,0 @@
-Logo design for my screen printing company. (Currently undergoing a name change)

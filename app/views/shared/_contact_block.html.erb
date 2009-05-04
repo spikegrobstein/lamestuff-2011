@@ -1,0 +1,33 @@
+<table id="contact_info">
+<tbody>
+<% @contact_infos.each do |contact_info| -%>
+	<tr>
+	<% unless @current_user.nil? -%>
+		<td>
+			<%= link_to '&uArr;', :action => 'move', :id => contact_info, :move => 'move_to_top' %>
+			<%= link_to '&uarr;', :action => 'move', :id => contact_info, :move => 'move_higher' %>
+			<%= link_to '&darr;', :action => 'move', :id => contact_info, :move => 'move_lower' %>
+			<%= link_to '&dArr;', :action => 'move', :id => contact_info, :move => 'move_to_bottom' %>
+		</td>
+	<% end -%>
+	
+		<td>
+			<span class="label"><%= h contact_info.key %>:</span>
+		</td>
+		<td>
+			<% if contact_info.link.empty? -%>
+				<%= h contact_info.value %>
+			<% else -%>
+				<%= link_to h(contact_info.value), contact_info.link %>
+			<% end %>
+		</td>
+		
+		<% unless @current_user.nil? -%>
+		<td>
+			<%= link_to '[edit]', edit_contact_info_path(contact_info) %>
+		</td>
+		<% end -%>
+	</tr>
+<% end -%>
+</tbody>
+</table>

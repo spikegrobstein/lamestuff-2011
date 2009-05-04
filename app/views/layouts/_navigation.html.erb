@@ -1,0 +1,17 @@
+<div id="navigation">
+	<ul id="main_nav">
+		<li><%= link_to 'home', home_path, :class => (@current_controller == 'home' ? 'current' : '') %></li>
+		<li><%= link_to 'portfolio', portfolio_path, :class => ((@current_controller == 'portfolio' || @current_controller == 'categories') ? 'current' : '') %></li>
+		<li><%= link_to 'r&eacute;sum&eacute;', resume_path, :class => (@current_controller == 'resume' ? 'current' : '') %></li>
+		<li><%= link_to 'contact', contact_infos_path, :class => (@current_controller == 'contact' ? 'current' : '') %></li>
+		<% unless @current_user.nil? -%>
+		<li><%= link_to 'logout', logout_path %></li>
+		<% end -%>
+	</ul>
+</div>
+	
+<% unless @current_user.nil? -%>
+	<div id="admin_actions">
+		<%= yield :actions %>
+	</div>
+<% end -%>

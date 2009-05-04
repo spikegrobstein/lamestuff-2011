@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  name: "art"
+  
+b:
+  id: 2
+  name: "drawings"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

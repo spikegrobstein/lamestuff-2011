@@ -1,1 +1,0 @@
-Example of logo re-creation. Low-quality supplied art turned into a high-resolution, vector masterpiece.

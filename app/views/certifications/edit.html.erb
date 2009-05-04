@@ -1,0 +1,16 @@
+<% content_for :heading do -%>
+	Edit Certification
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', certifications_path %>
+<% end-%>
+
+<% form_for @certification do |f| -%>
+	<%= f.error_messages %>
+
+	<%= render :partial => "form", :object => f %>
+	<div>
+		<%= f.submit 'Save', :disable_with => 'Saving...' %>
+	</div>
+<% end -%>

@@ -1,0 +1,32 @@
+<% content_for :heading do -%>
+	Edit Project
+<% end -%>
+
+<% content_for :actions do -%>
+	<%= link_to '&larr; Back', portfolio_path %>
+	<%= link_to '+ New', new_project_path %>
+	<%= link_to 'Show', project_path(@project) %>
+	<%= link_to 'Delete', project_path(@project), :method => 'delete', :confirm => 'Are you sure?' %>
+<% end-%>
+
+<% form_for @project, :html => { :multipart => true } do |f| -%>
+	<%= f.error_messages %>
+	<%= render :partial => "form", :object => f %>
+	<fieldset>
+		<legend>Elements</legend>
+		<div id="elements">
+			<%= render :partial => 'element', :collection => @project.elements %>
+		</div>
+		<%= add_project_element_link '[+] Add Element' %>
+	</fieldset>
+	<fieldset>
+		<legend>Categories</legend>
+		<div id="categories">
+			<%= render:partial => 'category', :collection => @project.project_categories %>
+		</div>
+		<%= add_category_link '[+] Add Category' %>
+	</fieldset>
+	<div>
+		<%= f.submit 'Save', :disable_with => 'Saving...' %>
+	</div>
+<% end -%>

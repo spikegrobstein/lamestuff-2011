@@ -1,0 +1,28 @@
+<div>
+	<%= form.label :place %>
+	<%= form.text_field :place %>
+</div>
+<div>
+	<%= form.label :work_position %>
+	<%= form.text_field :work_position %>
+</div>
+<div>
+	<%= form.label :location %>
+	<%= form.text_field :location %>
+</div>
+<div>
+	<%= form.label :industry %>
+	<%= form.text_field :industry %>
+</div>
+<div>
+	<%= form.label :start_date %>
+	<%= form.date_select :start_date, :start_year => 1990, :discard_day => true %>
+</div>
+<div>
+	<%= form.label :end_date %>
+	<%= form.date_select :end_date, :start_year => 1990, :discard_day => true, :default => 5.years.from_now %>
+</div>
+<div>
+	<%= form.label :description %>
+	<%= form.text_area :description, :rows => 6 %>
+</div>

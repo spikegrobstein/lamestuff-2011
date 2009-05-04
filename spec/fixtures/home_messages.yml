@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+a:
+  id: 1
+  description: 'This is a home message'
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

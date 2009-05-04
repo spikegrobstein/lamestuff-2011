@@ -1,0 +1,24 @@
+<fieldset>
+	<legend>Log in to make changes</legend>
+
+	<% form_tag session_path do -%>
+	<div>
+		<label for="login">Login</label>
+		<%= text_field_tag 'login' %>
+	</div>
+	<div>
+		<label for="password">Password</label>
+		<%= password_field_tag 'password' %>
+	</div>
+
+	<!-- Uncomment this if you want this functionality
+	<p><label for="remember_me">Remember me:</label>
+	<%= check_box_tag 'remember_me' %></p>
+	-->
+
+	<div>
+		<%= submit_tag 'Log in' %>
+	</div>
+	<% end -%>
+
+</fieldset>
