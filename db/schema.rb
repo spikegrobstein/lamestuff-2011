@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090202131249) do
+ActiveRecord::Schema.define(:version => 20100120034642) do
 
   create_table "accomplishments", :force => true do |t|
     t.integer  "position"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20090202131249) do
     t.datetime "updated_at"
     t.boolean  "show_in_header"
     t.boolean  "show_on_resume"
+    t.string   "vcard_field"
   end
 
   create_table "experiences", :force => true do |t|

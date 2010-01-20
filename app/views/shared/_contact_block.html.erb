@@ -1,4 +1,4 @@
-<table id="contact_info">
+<table id="contact_info" class="vcard">
 <tbody>
 <% @contact_infos.each do |contact_info| -%>
 	<tr>
@@ -15,11 +15,7 @@
 			<span class="label"><%= h contact_info.key %>:</span>
 		</td>
 		<td>
-			<% if contact_info.link.empty? -%>
-				<%= h contact_info.value %>
-			<% else -%>
-				<%= link_to h(contact_info.value), contact_info.link %>
-			<% end %>
+			<%= show_contact_info(contact_info) %>
 		</td>
 		
 		<% unless @current_user.nil? -%>
