@@ -15,7 +15,7 @@ module ApplicationHelper
   
   def show_contact_info(contact_info)
     if contact_info.link.empty?
-      if contact_info.vcard_field.empty?
+      if contact_info.vcard_field.nil? or contact_info.vcard_field.empty?
         return h(contact_info.value)
       else
         if contact_info.vcard_field.split(/\s+/).length == 1
