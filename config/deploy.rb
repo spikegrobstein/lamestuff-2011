@@ -1,17 +1,18 @@
 set :application, "lamestuff.com"
-set :repository,  "svn+ssh://lamestuff.com/svn/lamestuff.com/trunk"
+set :repository,  "ssh://spike@scm.home.spike.cx/scm/lamestuff.git"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
 # via the :deploy_to variable:
 set :deploy_base, "/home/lamestuff/"
-set :deploy_via, :export
+set :deploy_via, :remote_cache
+set :deploy_branch, 'master'
 
 set :use_sudo, false
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
-# set :scm, :subversion
+set :scm, :git
 
 set :runner , 'lamestuff'
 set :user, 'lamestuff'

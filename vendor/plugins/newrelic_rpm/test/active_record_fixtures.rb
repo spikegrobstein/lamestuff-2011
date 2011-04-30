@@ -10,6 +10,10 @@ module ActiveRecordFixtures
   def teardown
     ActiveRecordFixtures::Shipment.teardown
     ActiveRecordFixtures::Order.teardown
+    begin
+      super
+    rescue Exception => e
+    end
   end
   class Order < ActiveRecord::Base
     self.table_name = 'newrelic_test_orders'
@@ -39,9 +43,9 @@ module ActiveRecordFixtures
     has_and_belongs_to_many :orders, :class_name => 'ActiveRecordFixtures::Order'
     def self.setup
       connection.create_table self.table_name, :force => true do |t|
-        t.column :order_id, :integer 
+        # no other columns
       end
-      connection.create_table 'orders_shipments', :force => true do |t|
+      connection.create_table 'orders_shipments', :force => true, :id => false do |t|
         t.column :order_id, :integer 
         t.column :shipment_id, :integer 
       end

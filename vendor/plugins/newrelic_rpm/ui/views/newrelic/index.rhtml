@@ -15,12 +15,38 @@
                     </td>
                     <td/>
                 </tr>
-            </thead><%= render :partial => 'sample', :collection => @samples %>
+                </thead><% @samples.each do |sample| %>
+                  <%= render :partial => :sample, :object => sample %>
+                <% end %>
         </table>
 		</td>
 		<td valign=top>
-        <%= link_to_if @samples.size > 0, "Clear Transactions (#{@samples.size})", :action => 'reset' %><br/>
-        <%= link_to "List Threads", :action => 'threads' %>
+                          <% if defined?(Unicorn) || defined?(Passenger) %>
+                          <div class="flash">
+                          <p id="errorExplanation">
+                            We've noticed you're running a forking web server, like Unicorn or Passenger. See Below</p><p> Developer mode may be unpredictable, 
+                            since those servers run many processes and developer mode is entirely in the process.</p><p> We suggest you try Thin, 
+                            Mongrel, or another single-process web server for development mode.</p><p>
+                            (You can ignore this message if you're sure that you're running only one process, and it's not being reaped when inactive.)
+                         </p>
+                          </div>
+                          <% end %>
+
+
+        <%= link_to_if @samples.size > 0, "Clear Transactions (#{@samples.size})", 'reset' %><br/>
+        <%= link_to "List Threads", 'threads' %><br/>
+		<% if NewRelic::Control.instance.profiling_available? %>
+		  <p><b>Profiling available:</b>
+		  <% if NewRelic::Control.instance.profiling? %>
+            <%= link_to "Stop Profiling", 'profile?stop=true'%>
+	      <% else %>
+            <%= link_to "Start Profiling", 'profile?start=true' %>
+		  <% end %>
+		  </p>
+		<% else %>
+		  <p>You can use the ruby-prof gem to display profiles of your actions with Developer Mode.  Just 
+		  install the ruby-prof gem and restart your app.</p>
+		<% end %>
 			<h3>Welcome</h3>
 			<p>
 			Welcome to <b>New Relic RPM Developer Mode</b>.  This Rails extension traces the performance activity

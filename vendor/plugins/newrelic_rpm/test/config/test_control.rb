@@ -1,18 +1,27 @@
-require 'new_relic/control/rails'
-require 'new_relic/agent/agent_test_controller'
+require 'new_relic/control/frameworks/rails'
+require 'new_relic/control/frameworks/rails3'
 
-class NewRelic::Control::Test < NewRelic::Control::Rails
+if defined?(Rails) && Rails.respond_to?(:version) && Rails.version.to_i == 3
+  parent_class = NewRelic::Control::Frameworks::Rails3
+else
+  parent_class = NewRelic::Control::Frameworks::Rails
+end
+
+
+class NewRelic::Control::Frameworks::Test < parent_class
   def env
     'test'
   end
   def app
-    :rails
+    if defined?(Rails) && Rails.respond_to?(:version) && Rails.version.to_i == 3
+      :rails3
+    else
+      :rails
+    end
   end
-  def config_file
-    File.join(File.dirname(__FILE__), "newrelic.yml")
-  end
-  def initialize local_env
-    super local_env
+  
+  def initialize *args
+    super
     setup_log 
   end
   # when running tests, don't write out stderr

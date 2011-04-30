@@ -1,6 +1,6 @@
 # When installed as a plugin this is loaded automatically.
 #
-# When installed as a gem, you need to add 
+# When installed as a gem, you need to add
 #  require 'new_relic/recipes'
 # to your deploy.rb
 #
@@ -8,25 +8,16 @@
 # The task will run on app servers except where no_release is true.
 # If it fails, it will not affect the task execution or do a rollback.
 #
-make_notify_task = lambda do
-  
+make_notify_task = Proc.new do
+
   namespace :newrelic do
-    
-    # on all deployments, notify RPM 
+
+    # on all deployments, notify RPM
     desc "Record a deployment in New Relic RPM (rpm.newrelic.com)"
     task :notice_deployment, :roles => :app, :except => {:no_release => true } do
-      rails_env = fetch(:rails_env, "production")
-      require File.join(File.dirname(__FILE__), 'commands', 'deployments.rb')
+      rails_env = fetch(:newrelic_rails_env, fetch(:rails_env, "production"))
+      require File.join(File.dirname(__FILE__), 'command.rb')
       begin
-        # Try getting the changelog from the server.  Then fall back to local changelog
-        # if it doesn't work.  Problem is that I don't know what directory the .git is
-        # in when using git.  I could possibly use the remote cache but i don't know
-        # if that's always there.
-=begin        
-        run "cd #{current_release}; #{log_command}" do | io, stream_id, output |
-          changelog = output
-        end
-=end
         # allow overrides to be defined for revision, description, changelog and appname
         rev = fetch(:newrelic_revision) if exists?(:newrelic_revision)
         description = fetch(:newrelic_desc) if exists?(:newrelic_desc)
@@ -42,25 +33,25 @@ make_notify_task = lambda do
           end
           changelog = `#{log_command}`
         end
-        new_revision = rev || source.query_revision(source.head()) do |cmd| 
+        new_revision = rev || source.query_revision(source.head()) do |cmd|
           logger.debug "executing locally: '#{cmd}'"
-          `#{cmd}` 
+          `#{cmd}`
         end
         deploy_options = { :environment => rails_env,
           :revision => new_revision,
-          :changelog => changelog, 
+          :changelog => changelog,
           :description => description,
           :appname => appname }
         logger.debug "Uploading deployment to New Relic"
-        deployment = NewRelic::Commands::Deployments.new deploy_options
+        deployment = NewRelic::Command::Deployments.new deploy_options
         deployment.run
         logger.info "Uploaded deployment information to New Relic"
-      rescue ScriptError => e
-        logger.info "error creating New Relic deployment (#{e})\n#{e.backtrace.join("\n")}"
-      rescue NewRelic::Commands::CommandFailure => e
-        logger.info "unable to notify New Relic of the deployment (#{e})... skipping"
+      rescue NewRelic::Command::CommandFailure => e
+        logger.info e.message
       rescue Capistrano::CommandError
-        logger.info "unable to notify New Relic of the deployment... skipping"
+        logger.info "Unable to notify New Relic of the deployment... skipping"
+      rescue Exception => e
+        logger.info "Error creating New Relic deployment (#{e})\n#{e.backtrace.join("\n")}"
       end
       # WIP: For rollbacks, let's update the deployment we created with an indication of the failure:
       # on_rollback do
@@ -70,7 +61,7 @@ make_notify_task = lambda do
   end
 end
 require 'capistrano/version'
-if Capistrano::Version::MAJOR < 2
+if defined?(Capistrano::Version::MAJOR) && Capistrano::Version::MAJOR < 2
   STDERR.puts "Unable to load #{__FILE__}\nNew Relic Capistrano hooks require at least version 2.0.0"
 else
   instance = Capistrano::Configuration.instance
