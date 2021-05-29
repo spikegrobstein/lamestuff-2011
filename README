@@ -1,3 +1,12 @@
+== Lamestuff 2011
+
+This is the 2011 rewrite of lamestuff.com, built on rails with a full admin/editor
+mode for the backend to add new projects and update the resume, etc.
+
+Around 2017, the site was processed to be turned into static pages since nothing
+was being updated anymore and I wanted to host this on a small server, so I figured
+I'd open this up for posterity.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 
