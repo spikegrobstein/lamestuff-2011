@@ -1,19 +1,19 @@
 development:
   bucket_name: dev.lamestuff.com
-  access_key_id: '1F4WG0BXJ0YSC5KM5182'
-  secret_access_key: 'ZU/qXc79cWVth823YvxVeCTm4LewZorQ1IrkmeAZ'
+  access_key_id: 'XXXXXXXXXXXX'
+  secret_access_key: 'XXXXXXXXXXXX'
 
 test:
   bucket_name: test.lamestuff.com
-  access_key_id: '1F4WG0BXJ0YSC5KM5182'
-  secret_access_key: 'ZU/qXc79cWVth823YvxVeCTm4LewZorQ1IrkmeAZ'
+  access_key_id: 'XXXXXXXXXXXX'
+  secret_access_key: 'XXXXXXXXXXXX'
 
 production:
   bucket_name: lamestuff.com
-  access_key_id: '1F4WG0BXJ0YSC5KM5182'
-  secret_access_key: 'ZU/qXc79cWVth823YvxVeCTm4LewZorQ1IrkmeAZ' 
+  access_key_id: 'XXXXXXXXXXXX'
+  secret_access_key: 'XXXXXXXXXXXX'
 
 staging:
   bucket_name: lamestuff.com
-  access_key_id: '1F4WG0BXJ0YSC5KM5182'
-  secret_access_key: 'ZU/qXc79cWVth823YvxVeCTm4LewZorQ1IrkmeAZ'
+  access_key_id: 'XXXXXXXXXXXX'
+  secret_access_key: 'XXXXXXXXXXXX'
